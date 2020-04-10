@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +23,9 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebase, 'AWS-TEST'),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    AppRoutingModule
+    AngularFireAuthModule,
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
