@@ -1,0 +1,9 @@
+<h2>Yachts</h2>
+
+<div *ngFor="let yacht of yachts">
+  <div *ngIf="yacht">
+    <h3>{{ yacht.name }}</h3>
+    <h4>{{ yacht.price | currency }}</h4>
+    <p>{{ yacht.description }}</p>
+  </div>
+</div>
