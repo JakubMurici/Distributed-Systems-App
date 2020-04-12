@@ -1,0 +1,9 @@
+<h2>Bikes</h2>
+
+<div *ngFor="let bike of bikes">
+  <div *ngIf="bike">
+    <h3>{{ bike.name }}</h3>
+    <h4>{{ bike.price | currency }}</h4>
+    <p>{{ bike.description }}</p>
+  </div>
+</div>

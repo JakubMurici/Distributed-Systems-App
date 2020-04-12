@@ -12,12 +12,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { MenuComponent } from './menu/menu.component';
+import { CarListComponent } from './car-list/car-list.component';
+import { BikeListComponent } from './bike-list/bike-list.component';
+import { YachtListComponent } from './yacht-list/yacht-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    CarListComponent,
+    BikeListComponent,
+    YachtListComponent
   ],
   imports: [
     BrowserModule,
