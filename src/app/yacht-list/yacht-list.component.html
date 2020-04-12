@@ -1,9 +1,14 @@
 <h2>Yachts</h2>
 
-<div *ngFor="let yacht of yachts">
-  <div *ngIf="yacht">
+<div *ngIf="yachts?.length > 0;else noYachts">
+  <ul *ngFor="let yacht of yachts">
     <h3>{{ yacht.name }}</h3>
     <h4>{{ yacht.price | currency }}</h4>
     <p>{{ yacht.description }}</p>
-  </div>
+  </ul>
 </div>
+
+<ng-template #noYachts>
+  <hr>
+  <h5>There are no yachts to list</h5>
+</ng-template>

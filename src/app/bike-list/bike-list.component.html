@@ -1,9 +1,14 @@
 <h2>Bikes</h2>
 
-<div *ngFor="let bike of bikes">
-  <div *ngIf="bike">
+<div *ngIf="bikes?.length > 0;else noBikes">
+  <ul *ngFor="let bike of bikes">
     <h3>{{ bike.name }}</h3>
     <h4>{{ bike.price | currency }}</h4>
     <p>{{ bike.description }}</p>
-  </div>
+  </ul>
 </div>
+
+<ng-template #noBikes>
+  <hr>
+  <h5>There are no bikes to list</h5>
+</ng-template>
