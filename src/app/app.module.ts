@@ -22,6 +22,7 @@ import { YachtService} from './services/yacht.service';
 import { BikeService} from './services/bike.service';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ContactComponent } from './contact/contact.component';
     BikeListComponent,
     YachtListComponent,
     WelcomePageComponent,
-    ContactComponent
+    ContactComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
