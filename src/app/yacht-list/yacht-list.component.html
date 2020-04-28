@@ -4,7 +4,7 @@
   <ul *ngFor="let yacht of yachts">
     <h3>
       <a [title]="'Click here to buy '+ yacht.name"
-         [routerLink]="['/checkout']">
+         [routerLink]="['/checkout', yacht.id, yacht.name, yacht.description, yacht.price]">
         {{ yacht.name }}
       </a>
     </h3>

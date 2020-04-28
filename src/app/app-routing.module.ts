@@ -9,7 +9,6 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
-
 const routes: Routes = [
   { path: '', component: WelcomePageComponent},
   { path: 'menu', component: WelcomePageComponent},
@@ -18,7 +17,7 @@ const routes: Routes = [
   { path: 'bikes', component: BikeListComponent, canActivate: [AuthGuard]},
   { path: 'contacts', component: ContactComponent, canActivate: [AuthGuard]},
   { path: 'yachts', component: YachtListComponent, canActivate: [AuthGuard]},
-  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]}
+  { path: 'checkout/:id/:name/:description/:price', component: CheckoutComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
