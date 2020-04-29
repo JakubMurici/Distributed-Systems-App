@@ -2,7 +2,12 @@
 
 <div *ngIf="yachts?.length > 0;else noYachts">
   <ul *ngFor="let yacht of yachts">
-    <h3>{{ yacht.name }}</h3>
+    <h3>
+      <a [title]="'Click here to buy '+ yacht.name"
+         [routerLink]="['/checkout', yacht.id, yacht.name, yacht.description, yacht.price]">
+        {{ yacht.name }}
+      </a>
+    </h3>
     <h4>{{ yacht.price | currency }}</h4>
     <p>{{ yacht.description }}</p>
   </ul>

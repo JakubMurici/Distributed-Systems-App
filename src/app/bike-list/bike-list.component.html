@@ -2,7 +2,12 @@
 
 <div *ngIf="bikes?.length > 0;else noBikes">
   <ul *ngFor="let bike of bikes">
-    <h3>{{ bike.name }}</h3>
+    <h3>
+      <a [title]="'Click here to buy '+ bike.name"
+         [routerLink]="['/checkout', bike.id, bike.name, bike.description, bike.price]">
+        {{ bike.name }}
+      </a>
+    </h3>
     <h4>{{ bike.price | currency }}</h4>
     <p>{{ bike.description }}</p>
   </ul>

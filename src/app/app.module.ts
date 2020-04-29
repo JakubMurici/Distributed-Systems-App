@@ -17,11 +17,10 @@ import { CarListComponent } from './car-list/car-list.component';
 import { BikeListComponent } from './bike-list/bike-list.component';
 import { YachtListComponent } from './yacht-list/yacht-list.component';
 
-import { CarService} from './services/car.service';
-import { YachtService} from './services/yacht.service';
-import { BikeService} from './services/bike.service';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,9 @@ import { ContactComponent } from './contact/contact.component';
     BikeListComponent,
     YachtListComponent,
     WelcomePageComponent,
-    ContactComponent
+    ContactComponent,
+    CheckoutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

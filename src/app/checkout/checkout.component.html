@@ -1,0 +1,53 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">{{ name }}</h1>
+  <p class="lead">{{ description }}</p>
+</div>
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Full Payment</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ price | currency }}</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>8 knick-knacks</li>
+          <li>Storage compartment included</li>
+          <li>Email support sometimes, maybe</li>
+          <li>Help center access, also maybe</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary" (click)="purchase()">Buy Now, Please!</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">12-Month Finance</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ price / 12 | currency}}<small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>8 knick-knacks</li>
+          <li>Storage compartment included</li>
+          <li>Email support sometimes, maybe</li>
+          <li>Help center access, also maybe</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary" (click)="purchase()">Get started</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Ultimate Upgrade Pack</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ price * .05 | currency }}</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>16 total knick-knacks!!1</li>
+          <li>Storage compartment, its still here!</li>
+          <li>Email support definitely sometimes!</li>
+          <li>Help center access discount!</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary" (click)="purchase()">Get it now</button>
+      </div>
+    </div>
+  </div>
+</div>

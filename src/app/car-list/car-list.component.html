@@ -1,11 +1,30 @@
 <h2>Cars</h2>
 
 <div *ngIf="cars?.length > 0;else noCars">
-  <ul *ngFor="let car of cars">
-    <h3>{{ car.name }}</h3>
-    <h4>{{ car.price | currency }}</h4>
-    <p>{{ car.description }}</p>
-  </ul>
+  <div *ngFor="let car of cars">
+    <div class="card-deck mb-3 text-center" style="width: 40rem;">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">{{ car.name }}</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">{{ car.price | currency }}</h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>{{ car. description }}</li>
+            <li>Storage compartment included</li>
+            <li>Email support sometimes, maybe</li>
+            <li>Help center access, also maybe</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-lg btn-block btn-primary"
+            [routerLink]="['/checkout', car.id, car.name, car.description, car.price]">
+            Click here here for checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <ng-template #noCars>
