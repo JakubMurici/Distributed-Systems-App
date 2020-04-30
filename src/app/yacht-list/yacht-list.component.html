@@ -1,16 +1,33 @@
-<h2>Yachts</h2>
+<div id="title">
+  <h2>Yachts</h2>
+</div>
 
-<div *ngIf="yachts?.length > 0;else noYachts">
-  <ul *ngFor="let yacht of yachts">
-    <h3>
-      <a [title]="'Click here to buy '+ yacht.name"
-         [routerLink]="['/checkout', yacht.id, yacht.name, yacht.description, yacht.price]">
-        {{ yacht.name }}
-      </a>
-    </h3>
-    <h4>{{ yacht.price | currency }}</h4>
-    <p>{{ yacht.description }}</p>
-  </ul>
+
+<div *ngIf="yachts?.length > 0;else noYachts" id="content">
+  <div *ngFor="let yacht of yachts">
+    <div class="card-deck mb-3 text-center" style="width: 40rem;">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">{{ yacht.name }}</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">{{ yacht.price | currency }}</h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>{{ yacht. description }}</li>
+            <li>Storage compartment included</li>
+            <li>Email support sometimes, maybe</li>
+            <li>Help center access, also maybe</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-lg btn-block btn-primary"
+            [routerLink]="['/checkout', yacht.id, yacht.name, yacht.description, yacht.price]">
+            Click here here for checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <ng-template #noYachts>
