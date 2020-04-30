@@ -1,6 +1,9 @@
-<h2>Cars</h2>
+<div id="title">
+  <h2>Cars</h2>
+</div>
 
-<div *ngIf="cars?.length > 0;else noCars">
+
+<div *ngIf="cars?.length > 0;else noCars" id="content">
   <div *ngFor="let car of cars">
     <div class="card-deck mb-3 text-center" style="width: 40rem;">
       <div class="card mb-4 shadow-sm">
