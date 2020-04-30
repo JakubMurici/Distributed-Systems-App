@@ -1,16 +1,33 @@
-<h2>Bikes</h2>
+<div id="title">
+  <h2>Bikes</h2>
+</div>
 
-<div *ngIf="bikes?.length > 0;else noBikes">
-  <ul *ngFor="let bike of bikes">
-    <h3>
-      <a [title]="'Click here to buy '+ bike.name"
-         [routerLink]="['/checkout', bike.id, bike.name, bike.description, bike.price]">
-        {{ bike.name }}
-      </a>
-    </h3>
-    <h4>{{ bike.price | currency }}</h4>
-    <p>{{ bike.description }}</p>
-  </ul>
+
+<div *ngIf="bikes?.length > 0;else noBikes" id="content">
+  <div *ngFor="let bike of bikes">
+    <div class="card-deck mb-3 text-center" style="width: 40rem;">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">{{ bike.name }}</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">{{ bike.price | currency }}</h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>{{ bike. description }}</li>
+            <li>Storage compartment included</li>
+            <li>Email support sometimes, maybe</li>
+            <li>Help center access, also maybe</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-lg btn-block btn-primary"
+            [routerLink]="['/checkout', bike.id, bike.name, bike.description, bike.price]">
+            Click here here for checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <ng-template #noBikes>
